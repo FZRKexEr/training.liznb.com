@@ -1,6 +1,6 @@
 baseurl: "http://training.liznb.com"
 languageCode: "en-us"
-title: "Training records"
+title: "Training"
 theme: "hugo-xmin"
 footnotereturnlinkcontents: "↩"
 
