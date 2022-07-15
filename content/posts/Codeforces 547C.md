@@ -1,8 +1,8 @@
 ---
-title: Codeforces 547C
+title: "Codeforces 547C"
 date: '2022-07-15'
 categories:
-  - codeforces
+  - Codeforces
 tags:
   - 莫比乌斯反演
 
