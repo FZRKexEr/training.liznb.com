@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Training records</title>
+    <link>http://training.liznb.com/</link>
+    <description>Recent content on Training records</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://training.liznb.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codeforces 547C 题解</title>
+      <link>http://training.liznb.com/posts/codeforces-547c-%E9%A2%98%E8%A7%A3/</link>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://training.liznb.com/posts/codeforces-547c-%E9%A2%98%E8%A7%A3/</guid>
+      <description>https://codeforces.com/contest/547/problem/C
+题意: 给 $n$ 个数字和 $q$ 次操作，列表初始为空，每次操作加入一个数字到列表或者删除一个列表里的数字。问每次操作后列表中 $gcd(a_{i}, a_{j}) = 1 (i &amp;lt; j)$ 的对数。
+题解： 假设当前在列表中最大的数字是 $m$。
+定义 $f(n)$ 表示列表中 $gcd(a_{i}, a_{j}) = n$ 的对数, 这里 $i$ 可以比 $j$ 大。也就是:
+$$f(n) = \sum_{i=1}^{m} \sum_{j=1}^{m}\left[\operatorname{gcd}\left(a_{i}, a_{j}\right)=n\right]$$
+$$F(n) = \sum_{n | d} f(d)$$ 把 $F$ 反演得到 $f$：
+$$F(n)=\sum_{n \mid d} f(d) \Leftrightarrow f(n)=\sum_{n \mid d} \mu\left(\frac{d}{n}\right) F(d)$$
+其实我们只需要求 $f(1)$： $$f(1)=\sum^{m}_{d=1} \mu\left(d\right) F(d)$$
+现在的问题就是怎么求出 $F(d)$, 在序列中选两个数，这两个数的 $\gcd$ 是 $d$ 的倍数。 $F(d)$ 等于满足这个条件的对数。观察一下就可以知道: $$F(d) = (\sum_{d|i} cnt(i)) ^ {2}$$</description>
+    </item>
+    
+    <item>
+      <title>洛谷 P1829 [国家集训队]Crash的数字表格 / JZPTAB</title>
+      <link>http://training.liznb.com/posts/%E6%B4%9B%E8%B0%B7-p1829-%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9Fcrash%E7%9A%84%E6%95%B0%E5%AD%97%E8%A1%A8%E6%A0%BC-jzptab/</link>
+      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>http://training.liznb.com/posts/%E6%B4%9B%E8%B0%B7-p1829-%E5%9B%BD%E5%AE%B6%E9%9B%86%E8%AE%AD%E9%98%9Fcrash%E7%9A%84%E6%95%B0%E5%AD%97%E8%A1%A8%E6%A0%BC-jzptab/</guid>
+      <description>推式子
+$$\sum_{i=1}^{n} \sum_{j=1}^{m} \operatorname{lcm}(i, j)[\operatorname{gcd}(i, j) \leq a]$$
+$$\sum_{i=1}^{n} \sum_{j=1}^{m}\frac{i \cdot j}{\gcd(i, j)}[\gcd(i, j) \leq a]$$
+根据反演套路，把 $\gcd(i, j)$ 提出来单独枚举。
+$$\sum_{d = 1}^{\min(n,m, a)}\sum_{i = 1}^{n}\sum_{j=1}^{m} \frac{i \cdot j}{d} [\gcd(i, j) = d]$$
+根据反演套路，把 $d$ 提出来，只做 $gcd(i, j) = 1$ 的情况(相当于枚举 $d$ 的倍数)。
+$$\sum_{d = 1}^{\min(n,m, a)}\sum_{i=1}^{\left\lfloor\frac{n}{d}\right\rfloor} \sum_{j=1}^{\left\lfloor\frac{m}{d}\right\rfloor} \frac{i \cdot j \cdot d^{2}}{d} [\gcd(i, j) = 1]$$
+$$\sum_{d = 1}^{\min(n,m, a)} d\sum_{i=1}^{\left\lfloor\frac{n}{d}\right\rfloor} \sum_{j=1}^{\left\lfloor\frac{m}{d}\right\rfloor} i \cdot j \cdot [\gcd(i, j) = 1]$$</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,4 +1,4 @@
-baseurl: "https://training.liznb.com"
+baseurl: "http://training.liznb.com"
 languageCode: "en-us"
 title: "Training records"
 theme: "hugo-xmin"
