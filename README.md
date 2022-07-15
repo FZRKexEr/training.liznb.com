@@ -1,2 +1,3 @@
 # training.liznb.com
-Github Pages
+
+Competitive Programming 训练记录
