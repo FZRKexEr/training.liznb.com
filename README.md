@@ -1,2 +1,2 @@
-# liznb.github.io
+# training.liznb.com
 Github Pages
