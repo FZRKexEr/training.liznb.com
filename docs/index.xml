@@ -13,8 +13,7 @@
       <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
       
       <guid>http://training.liznb.com/posts/codeforces-547c/</guid>
-      <description>https://codeforces.com/contest/547/problem/C
-题意: 给 $n$ 个数字和 $q$ 次操作，列表初始为空，每次操作加入一个数字到列表或者删除一个列表里的数字。问每次操作后列表中 $gcd(a_{i}, a_{j}) = 1 (i &amp;lt; j)$ 的对数。
+      <description>题意: 给 $n$ 个数字和 $q$ 次操作，列表初始为空，每次操作加入一个数字到列表或者删除一个列表里的数字。问每次操作后列表中 $gcd(a_{i}, a_{j}) = 1 (i &amp;lt; j)$ 的对数。
 题解： 假设当前在列表中最大的数字是 $m$。
 定义 $f(n)$ 表示列表中 $gcd(a_{i}, a_{j}) = n$ 的对数, 这里 $i$ 可以比 $j$ 大。也就是:
 $$f(n) = \sum_{i=1}^{m} \sum_{j=1}^{m}\left[\operatorname{gcd}\left(a_{i}, a_{j}\right)=n\right]$$
@@ -47,8 +46,8 @@ $$\sum_{d = 1}^{\min(n,m, a)} d\sum_{i=1}^{\left\lfloor\frac{n}{d}\right\rfloor}
       
       <guid>http://training.liznb.com/about/</guid>
       <description>2022.7 -
-VP 2022.7.8 The 19th Zhejiang Provincial Collegiate Programming Contest (39/630)
-2022.7.14 XXI Open Cup named after E.V. Pankratiev. Grand Prix of Krakow, Division 1. (119/203)</description>
+VP The 19th Zhejiang Provincial Collegiate Programming Contest (39/630, 2022.7.8)
+XXI Open Cup named after E.V. Pankratiev. Grand Prix of Krakow, Division 1. (119/203, 2022.7.14)</description>
     </item>
     
   </channel>

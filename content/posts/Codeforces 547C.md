@@ -8,7 +8,6 @@ tags:
 
 ---
 
-> https://codeforces.com/contest/547/problem/C
 
 题意:
 给 $n$ 个数字和 $q$ 次操作，列表初始为空，每次操作加入一个数字到列表或者删除一个列表里的数字。问每次操作后列表中 $gcd(a_{i}, a_{j}) = 1 (i < j)$ 的对数。
