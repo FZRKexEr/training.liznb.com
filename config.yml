@@ -1,0 +1,31 @@
+baseurl: "https://training.liznb.com"
+languageCode: "en-us"
+title: "Training records"
+theme: "hugo-xmin"
+footnotereturnlinkcontents: "↩"
+
+permalinks:
+  post: "/post/:year/:month/:day/:slug/"
+
+menu:
+  main:
+    - name: Home
+      url: ""
+      weight: 1
+    - name: Categories
+      url: "categories/"
+      weight: 2 
+    - name: Tags
+      url: "tags/"
+      weight: 3
+
+params:
+  #  description: ""
+  footer: "&copy; [LiZnB](https://training.liznb.com) 2022 -- {Year}"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
