@@ -1,5 +1,5 @@
 ---
-title: Codeforces 547C 题解
+title: Codeforces 547C
 date: '2022-07-15'
 categories:
   - codeforces

@@ -8,11 +8,11 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 15 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="http://training.liznb.com/categories/codeforces/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Codeforces 547C 题解</title>
-      <link>http://training.liznb.com/posts/codeforces-547c-%E9%A2%98%E8%A7%A3/</link>
+      <title>Codeforces 547C</title>
+      <link>http://training.liznb.com/posts/codeforces-547c/</link>
       <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
       
-      <guid>http://training.liznb.com/posts/codeforces-547c-%E9%A2%98%E8%A7%A3/</guid>
+      <guid>http://training.liznb.com/posts/codeforces-547c/</guid>
       <description>https://codeforces.com/contest/547/problem/C
 题意: 给 $n$ 个数字和 $q$ 次操作，列表初始为空，每次操作加入一个数字到列表或者删除一个列表里的数字。问每次操作后列表中 $gcd(a_{i}, a_{j}) = 1 (i &amp;lt; j)$ 的对数。
 题解： 假设当前在列表中最大的数字是 $m$。
