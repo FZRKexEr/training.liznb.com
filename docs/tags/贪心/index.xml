@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Codeforces on Training</title>
-    <link>http://training.liznb.com/categories/codeforces/</link>
-    <description>Recent content in Codeforces on Training</description>
+    <title>贪心 on Training</title>
+    <link>http://training.liznb.com/tags/%E8%B4%AA%E5%BF%83/</link>
+    <description>Recent content in 贪心 on Training</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jul 2022 20:27:31 +0800</lastBuildDate><atom:link href="http://training.liznb.com/categories/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Jul 2022 20:27:31 +0800</lastBuildDate><atom:link href="http://training.liznb.com/tags/%E8%B4%AA%E5%BF%83/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Codeforces Round #808 (Div. 2)</title>
       <link>http://training.liznb.com/posts/codeforces-1708/</link>
@@ -25,22 +25,6 @@
       <guid>http://training.liznb.com/posts/codeforces-1705/</guid>
       <description>A - Mark the Photographer 排序后第一行 $1$ 到 $n$, 第二行 $n + 1$ 到 $n$。检查是否满足高度差大于等于 $x$。可以用反证法证明。
 // // a.cpp // 2022-07-15 21:27 // // Created by liznb // #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #ifdef LOCAL #include &amp;quot;/Users/liznb/algo/liznb.h&amp;quot; #endif #define int long long signed main() { ios::sync_with_stdio(false); cin.tie(0); int z; cin &amp;gt;&amp;gt; z; while (z--) { int n, k; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; k; vector&amp;lt;int&amp;gt; a(n * 2 + 1); for (int i = 1; i &amp;lt;= n * 2; i++) { cin &amp;gt;&amp;gt; a[i]; } sort(a.</description>
-    </item>
-    
-    <item>
-      <title>Codeforces 547C</title>
-      <link>http://training.liznb.com/posts/codeforces-547c/</link>
-      <pubDate>Fri, 15 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>http://training.liznb.com/posts/codeforces-547c/</guid>
-      <description>题意: 给 $n$ 个数字和 $q$ 次操作，列表初始为空，每次操作加入一个数字到列表或者删除一个列表里的数字。问每次操作后列表中 $gcd(a_{i}, a_{j}) = 1 (i &amp;lt; j)$ 的对数。
-题解： 假设当前在列表中最大的数字是 $m$。
-定义 $f(n)$ 表示列表中 $gcd(a_{i}, a_{j}) = n$ 的对数, 这里 $i$ 可以比 $j$ 大。也就是:
-$$f(n) = \sum_{i=1}^{m} \sum_{j=1}^{m}\left[\operatorname{gcd}\left(a_{i}, a_{j}\right)=n\right]$$
-$$F(n) = \sum_{n | d} f(d)$$ 把 $F$ 反演得到 $f$：
-$$F(n)=\sum_{n \mid d} f(d) \Leftrightarrow f(n)=\sum_{n \mid d} \mu\left(\frac{d}{n}\right) F(d)$$
-其实我们只需要求 $f(1)$： $$f(1)=\sum^{m}_{d=1} \mu\left(d\right) F(d)$$
-现在的问题就是怎么求出 $F(d)$, 在序列中选两个数，这两个数的 $\gcd$ 是 $d$ 的倍数。 $F(d)$ 等于满足这个条件的对数。观察一下就可以知道: $$F(d) = (\sum_{d|i} cnt(i)) ^ {2}$$</description>
     </item>
     
   </channel>
