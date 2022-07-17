@@ -24,7 +24,7 @@ menu:
 
 params:
   #  description: ""
-  footer: "&copy; [LiZnB](https://training.liznb.com) 2022 -- {Year}"
+  footer: "&copy; [LiZnB](https://training.liznb.com) {Year}"
 
 markup:
   highlight:
