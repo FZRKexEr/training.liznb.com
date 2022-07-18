@@ -14,9 +14,8 @@
       
       <guid>http://training.liznb.com/posts/2022%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A11/</guid>
       <description>A - Villages: Landlines 区间求交后，两个不连续区间之间的距离加起来就是答案。
-I - Chiitoitsu $f[i][j]$ 表示到第 $i$ 回合，手里牌有 $j$ 队的概率，递推：第 $i$ 回合手里有 $j$ 对，那么在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张无用的牌，概率为 $\frac{(123-i+1-(13-j*2)*3)}{123-i+1}$ ，在第在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张有用的牌与其中一张手牌凑成一对概率为， $\frac{(13-(j-1)*2)*3}{123-i+1}$ 。
-G - Lexicographical Maximum 比较这个数本身和比它少一位的 $999&amp;hellip;99$ 哪个字典序大。
-J - Serval and Essay 暴力拓扑排序，访问过的点就不可能再作为拓扑排序的起点了（但是可以作为新的拓扑排序路径上的点）。最坏情况是 $O(n^{2})$, 随机化选点拓扑排序即可，期望复杂度大概是 $O(n\log n)$。</description>
+D - Mocha and Railgun 线段垂直且指向原点的时候弧长最大，用 acos 求一下即可。
+// // d.cpp // 2022-07-18 19:49 // // Created by liznb // #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #ifdef LOCAL #include &amp;quot;/Users/liznb/algo/liznb.h&amp;quot; #endif #define int long long signed main() { ios::sync_with_stdio(false); cin.tie(0); int z; cin &amp;gt;&amp;gt; z; while (z--) { double r, x, y, d; cin &amp;gt;&amp;gt; r &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y &amp;gt;&amp;gt; d; double dis = sqrt(x * x + y * y); double a1 = acos((dis - d) / r); double a2 = acos((dis + d) / r); cout &amp;lt;&amp;lt; fixed &amp;lt;&amp;lt; setprecision(12) &amp;lt;&amp;lt; (a1 - a2) * r &amp;lt;&amp;lt; endl; } return 0; } G - Lexicographical Maximum 比较这个数本身和比它少一位的 $999&amp;hellip;99$ 哪个字典序大。</description>
     </item>
     
   </channel>

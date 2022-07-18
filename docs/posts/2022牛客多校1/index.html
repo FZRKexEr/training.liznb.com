@@ -35,12 +35,357 @@
 <main>
 <h1 id="a---villages-landlines">A - Villages: Landlines</h1>
 <p>区间求交后，两个不连续区间之间的距离加起来就是答案。</p>
-<h1 id="i---chiitoitsu">I - Chiitoitsu</h1>
-<p>$f[i][j]$ 表示到第 $i$ 回合，手里牌有 $j$ 队的概率，递推：第 $i$ 回合手里有 $j$ 对，那么在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张无用的牌，概率为 $\frac{(123-i+1-(13-j*2)*3)}{123-i+1}$ ，在第在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张有用的牌与其中一张手牌凑成一对概率为， $\frac{(13-(j-1)*2)*3}{123-i+1}$ 。</p>
+<h1 id="d---mocha-and-railgun">D - Mocha and Railgun</h1>
+<p>线段垂直且指向原点的时候弧长最大，用 acos 求一下即可。</p>
+<pre><code class="language-cpp">//
+//  d.cpp
+//  2022-07-18 19:49
+//
+//  Created by liznb
+//  
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#ifdef LOCAL
+#include &quot;/Users/liznb/algo/liznb.h&quot;
+#endif
+
+#define int long long
+
+signed main() {
+  ios::sync_with_stdio(false); 
+  cin.tie(0);
+   
+  int z; cin &gt;&gt; z; 
+  while (z--) {
+    double r, x, y, d; cin &gt;&gt; r &gt;&gt; x &gt;&gt; y &gt;&gt; d;
+    double dis = sqrt(x * x + y * y);
+    double a1 = acos((dis - d) / r); 
+    double a2 = acos((dis + d) / r);
+    cout &lt;&lt; fixed &lt;&lt; setprecision(12) &lt;&lt; (a1 - a2) * r &lt;&lt; endl; 
+  }
+
+  return 0;
+}
+</code></pre>
 <h1 id="g---lexicographical-maximum">G - Lexicographical Maximum</h1>
 <p>比较这个数本身和比它少一位的 $999&hellip;99$ 哪个字典序大。</p>
+<pre><code class="language-cpp">//
+//  g.cpp
+//  2022-07-18 12:04
+//
+//  Created by liznb
+//  
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#ifdef LOCAL
+#include &quot;/Users/liznb/algo/liznb.h&quot;
+#endif
+
+#define int long long
+
+signed main() {
+  ios::sync_with_stdio(false); 
+  cin.tie(0);
+   
+  string n; cin &gt;&gt; n; 
+  string res2;
+
+  for (int i = 0; i &lt; (int) n.length() - 1; i++) {
+    res2 += &quot;9&quot;;
+  }
+
+  cout &lt;&lt; max(res2, n);
+
+  return 0;
+}
+</code></pre>
+<h1 id="i---chiitoitsu">I - Chiitoitsu</h1>
+<p>$f[i][j]$ 表示到第 $i$ 回合，手里牌有 $j$ 队的概率，递推：第 $i$ 回合手里有 $j$ 对，那么在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张无用的牌，概率为 $\frac{(123-i+1-(13-j*2)*3)}{123-i+1}$ ，在第在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张有用的牌与其中一张手牌凑成一对概率为， $\frac{(13-(j-1)*2)*3}{123-i+1}$ 。</p>
 <h1 id="j---serval-and-essay">J - Serval and Essay</h1>
 <p>暴力拓扑排序，访问过的点就不可能再作为拓扑排序的起点了（但是可以作为新的拓扑排序路径上的点）。最坏情况是 $O(n^{2})$, 随机化选点拓扑排序即可，期望复杂度大概是 $O(n\log n)$。</p>
+<pre><code class="language-cpp">//
+//  j.cpp
+//  2022-07-18 12:39
+//
+//  Created by liznb
+//  
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+
+//#define LOCAL
+#ifdef LOCAL
+#include &quot;/Users/liznb/algo/liznb.h&quot;
+#endif
+
+#define endl '\n'
+static struct FastInput {
+  static constexpr int BUF_SIZE = 1 &lt;&lt; 20;
+  char buf[BUF_SIZE];
+  size_t chars_read = 0;
+  size_t buf_pos = 0;
+  FILE *in = stdin;
+  char cur = 0;
+
+  inline char get_char() {
+    if (buf_pos &gt;= chars_read) {
+      chars_read = fread(buf, 1, BUF_SIZE, in);
+      buf_pos = 0;
+      buf[0] = (chars_read == 0 ? -1 : buf[0]);
+    }
+    return cur = buf[buf_pos++];
+  }
+ 
+  inline void tie(int) {}
+
+  inline explicit operator bool() {
+    return cur != -1;
+  }
+
+  inline static bool is_blank(char c) {
+    return c &lt;= ' ';
+  }
+
+  inline bool skip_blanks() {
+    while (is_blank(cur) &amp;&amp; cur != -1) {
+      get_char();
+    }
+    return cur != -1;
+  }
+ 
+  inline FastInput&amp; operator&gt;&gt;(char&amp; c) {
+    skip_blanks();
+    c = cur;
+    return *this;
+  }
+  
+  inline FastInput&amp; operator&gt;&gt;(string&amp; s) {
+    if (skip_blanks()) {
+      s.clear();
+      do {
+        s += cur;
+      } while (!is_blank(get_char()));
+    }
+    return *this;
+  }
+ 
+  template &lt;typename T&gt;
+  inline FastInput&amp; read_integer(T&amp; n) {
+    // unsafe, doesn't check that characters are actually digits
+    n = 0;
+    if (skip_blanks()) {
+      int sign = +1;
+      if (cur == '-') {
+        sign = -1;
+        get_char();
+      }
+      do {
+        n += n + (n &lt;&lt; 3) + cur - '0';
+      } while (!is_blank(get_char()));
+      n *= sign;
+    }
+    return *this;
+  }
+
+  template &lt;typename T&gt;
+  inline typename enable_if&lt;is_integral&lt;T&gt;::value, FastInput&amp;&gt;::type operator&gt;&gt;(T&amp; n) {
+    return read_integer(n);
+  }
+  
+  #if !defined(_WIN32) || defined(_WIN64)
+  inline FastInput&amp; operator&gt;&gt;(__int128&amp; n) {
+    return read_integer(n);
+  }
+  #endif
+
+  template &lt;typename T&gt;
+  inline typename enable_if&lt;is_floating_point&lt;T&gt;::value, FastInput&amp;&gt;::type operator&gt;&gt;(T&amp; n) {
+    // not sure if really fast, for compatibility only
+    n = 0;
+    if (skip_blanks()) {
+      string s;
+      (*this) &gt;&gt; s;
+      sscanf(s.c_str(), &quot;%lf&quot;, &amp;n);
+    }
+    return *this;
+  }
+} fast_input;
+
+#define cin fast_input
+
+static struct FastOutput {
+  static constexpr int BUF_SIZE = 1 &lt;&lt; 20;
+  char buf[BUF_SIZE];
+  size_t buf_pos = 0;
+  static constexpr int TMP_SIZE = 1 &lt;&lt; 20;
+  char tmp[TMP_SIZE];
+  FILE *out = stdout;
+
+  inline void put_char(char c) {
+    buf[buf_pos++] = c;
+    if (buf_pos == BUF_SIZE) {
+      fwrite(buf, 1, buf_pos, out);
+      buf_pos = 0;
+    }
+  }
+
+  ~FastOutput() {
+    fwrite(buf, 1, buf_pos, out);
+  }
+
+  inline FastOutput&amp; operator&lt;&lt;(char c) {
+    put_char(c);
+    return *this;
+  }
+
+  inline FastOutput&amp; operator&lt;&lt;(const char* s) {
+    while (*s) {
+      put_char(*s++);
+    }
+    return *this;
+  }
+ 
+  inline FastOutput&amp; operator&lt;&lt;(const string&amp; s) {
+    for (int i = 0; i &lt; (int) s.size(); i++) {
+      put_char(s[i]);
+    }
+    return *this;
+  }
+ 
+  template &lt;typename T&gt;
+  inline char* integer_to_string(T n) {
+    // beware of TMP_SIZE
+    char* p = tmp + TMP_SIZE - 1;
+    if (n == 0) {
+      *--p = '0';
+    } else {
+      bool is_negative = false;
+      if (n &lt; 0) {
+        is_negative = true;
+        n = -n;
+      }
+      while (n &gt; 0) {
+        *--p = (char) ('0' + n % 10);
+        n /= 10;
+      }
+      if (is_negative) {
+        *--p = '-';
+      }
+    }
+    return p;
+  }
+
+  template &lt;typename T&gt;
+  inline typename enable_if&lt;is_integral&lt;T&gt;::value, char*&gt;::type stringify(T n) {
+    return integer_to_string(n);
+  }
+
+  #if !defined(_WIN32) || defined(_WIN64)
+  inline char* stringify(__int128 n) {
+    return integer_to_string(n);
+  }
+  #endif
+
+  template &lt;typename T&gt;
+  inline typename enable_if&lt;is_floating_point&lt;T&gt;::value, char*&gt;::type stringify(T n) {
+    sprintf(tmp, &quot;%.17f&quot;, n);
+    return tmp;
+  }
+
+  template &lt;typename T&gt;
+  inline FastOutput&amp; operator&lt;&lt;(const T&amp; n) {
+    auto p = stringify(n);
+    for (; *p != 0; p++) {
+      put_char(*p);
+    }
+    return *this;
+  }
+} fast_output;
+
+#define cout fast_output
+
+
+signed main() {
+ // file();
+  ios::sync_with_stdio(false); 
+  cin.tie(0);
+   
+  int z; cin &gt;&gt; z; 
+  int tot = 0;
+
+  while (z--) {
+    int n; cin &gt;&gt; n; 
+//    debug(n);
+    vector&lt;vector&lt;int&gt;&gt; G(n + 1);
+    vector&lt;int&gt; degree(n + 1, 0);
+    
+    vector&lt;array&lt;int, 2&gt;&gt; choose; 
+
+    mt19937 rng((unsigned int) chrono::steady_clock::now().time_since_epoch().count());
+    uniform_int_distribution&lt;int&gt; U(1, 1e9);
+
+    for (int i = 1; i &lt;= n; i++) {
+      int k; cin &gt;&gt; k;
+      for (int j = 1; j &lt;= k; j++) {
+        int u; cin &gt;&gt; u;      
+        G[u].push_back(i); 
+        degree[i]++;
+      }
+      choose.push_back({U(rng), i});
+    }
+
+    sort(choose.begin(), choose.end());
+    
+    vector&lt;int&gt; vis(n + 1, 0);
+
+    int count = 0;
+    auto topo = [&amp;] (queue&lt;int&gt; que) {
+      vector&lt;int&gt; add;
+      int res = 0;
+
+      int st = que.front();
+      
+      while (!que.empty()) {
+        int x = que.front();
+        vis[x]++;
+        res++;
+        que.pop();
+        for (auto &amp;v : G[x]) {
+          if (v == st) continue;
+          degree[v]--;
+          add.push_back(v);
+          if ((int) degree[v] == 0) {
+            que.push(v);
+          }
+        }
+      }
+      count += res;
+      for (auto &amp;it : add) degree[it]++;
+      return res;
+    };
+
+    int ans = 0;
+    int cnt = 0;
+    for (int i = 0; i &lt; (int) choose.size(); i++) {
+      int pos = choose[i][1];
+      if (vis[pos]) continue;
+      cnt++;
+      queue&lt;int&gt; que; que.push(pos);
+      auto res = topo(que);
+      ans = max(ans, res); 
+    }
+    cout &lt;&lt; &quot;Case #&quot; &lt;&lt; ++tot &lt;&lt; &quot;: &quot; &lt;&lt; ans &lt;&lt; endl;
+//    debug(count, cnt);
+  }
+  //Timer();
+  return 0;
+}
+</code></pre>
 
 </main>
 
