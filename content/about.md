@@ -13,4 +13,4 @@ XXI Open Cup named after E.V. Pankratiev. Grand Prix of Krakow, Division 1. (119
 
 ## 正式比赛
 
-["蔚来杯"2022牛客暑期多校训练营1 (208/1485, 2022.7.18)](training.liznb.com/posts/2022牛客多校1/)
+["蔚来杯"2022牛客暑期多校训练营1 (208/1485, 2022.7.18)](/posts/2022牛客多校1/)
