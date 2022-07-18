@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Categories | Training</title>
+    <title>&#34;蔚来杯&#34;2022牛客暑期多校训练营1 | Training</title>
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/fonts.css" />
     <link href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css" rel="stylesheet">
@@ -26,24 +26,23 @@
     <hr/>
     </nav>
 
+<div class="article-meta">
+<h1><span class="title">&ldquo;蔚来杯&quot;2022牛客暑期多校训练营1</span></h1>
 
-<h1>Categories</h1>
+<h2 class="date">2022/07/18</h2>
+</div>
 
-<ul class="terms">
-  
-  <li>
-    <a href="/categories/codeforces/">Codeforces</a> (3)
-  </li>
-  
-  <li>
-    <a href="/categories/%E6%B4%9B%E8%B0%B7/">洛谷</a> (1)
-  </li>
-  
-  <li>
-    <a href="/categories/%E7%89%9B%E5%AE%A2/">牛客</a> (1)
-  </li>
-  
-</ul>
+<main>
+<h1 id="a---villages-landlines">A - Villages: Landlines</h1>
+<p>区间求交后，两个不连续区间之间的距离加起来就是答案。</p>
+<h1 id="i---chiitoitsu">I - Chiitoitsu</h1>
+<p>$f[i][j]$ 表示到第 $i$ 回合，手里牌有 $j$ 队的概率，递推：第 $i$ 回合手里有 $j$ 对，那么在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张无用的牌，概率为 $\frac{(123-i+1-(13-j*2)*3)}{123-i+1}$ ，在第在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张有用的牌与其中一张手牌凑成一对概率为， $\frac{(13-(j-1)*2)*3}{123-i+1}$ 。</p>
+<h1 id="g---lexicographical-maximum">G - Lexicographical Maximum</h1>
+<p>比较这个数本身和比它少一位的 $999&hellip;99$ 哪个字典序大。</p>
+<h1 id="j---serval-and-essay">J - Serval and Essay</h1>
+<p>暴力拓扑排序，访问过的点就不可能再作为拓扑排序的起点了（但是可以作为新的拓扑排序路径上的点）。最坏情况是 $O(n^{2})$, 随机化选点拓扑排序即可，期望复杂度大概是 $O(n\log n)$。</p>
+
+</main>
 
   <footer>
   <script type="text/javascript"

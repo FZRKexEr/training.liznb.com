@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>随机化 on Training</title>
+    <link>http://training.liznb.com/tags/%E9%9A%8F%E6%9C%BA%E5%8C%96/</link>
+    <description>Recent content in 随机化 on Training</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Jul 2022 19:06:56 +0800</lastBuildDate><atom:link href="http://training.liznb.com/tags/%E9%9A%8F%E6%9C%BA%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>&#34;蔚来杯&#34;2022牛客暑期多校训练营1</title>
+      <link>http://training.liznb.com/posts/2022%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A11/</link>
+      <pubDate>Mon, 18 Jul 2022 19:06:56 +0800</pubDate>
+      
+      <guid>http://training.liznb.com/posts/2022%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A11/</guid>
+      <description>A - Villages: Landlines 区间求交后，两个不连续区间之间的距离加起来就是答案。
+I - Chiitoitsu $f[i][j]$ 表示到第 $i$ 回合，手里牌有 $j$ 队的概率，递推：第 $i$ 回合手里有 $j$ 对，那么在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张无用的牌，概率为 $\frac{(123-i+1-(13-j*2)*3)}{123-i+1}$ ，在第在第 $i-1$ 回合手里有 $j$ 对并且抽到了一张有用的牌与其中一张手牌凑成一对概率为， $\frac{(13-(j-1)*2)*3}{123-i+1}$ 。
+G - Lexicographical Maximum 比较这个数本身和比它少一位的 $999&amp;hellip;99$ 哪个字典序大。
+J - Serval and Essay 暴力拓扑排序，访问过的点就不可能再作为拓扑排序的起点了（但是可以作为新的拓扑排序路径上的点）。最坏情况是 $O(n^{2})$, 随机化选点拓扑排序即可，期望复杂度大概是 $O(n\log n)$。</description>
+    </item>
+    
+  </channel>
+</rss>
