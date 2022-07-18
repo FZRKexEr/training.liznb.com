@@ -14,7 +14,7 @@
       
       <guid>http://training.liznb.com/posts/2022%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A11/</guid>
       <description>A - Villages: Landlines 区间求交后，两个不连续区间之间的距离加起来就是答案。
-D - Mocha and Railgun 线段垂直且指向原点的时候弧长最大，用 acos 求一下即可。
+D - Mocha and Railgun 线段垂直且指向原点的时候弧长最大，用 acos 求一下即可。 注意：用 atan 只能表示一四象限。
 // // d.cpp // 2022-07-18 19:49 // // Created by liznb // #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #ifdef LOCAL #include &amp;quot;/Users/liznb/algo/liznb.h&amp;quot; #endif #define int long long signed main() { ios::sync_with_stdio(false); cin.tie(0); int z; cin &amp;gt;&amp;gt; z; while (z--) { double r, x, y, d; cin &amp;gt;&amp;gt; r &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y &amp;gt;&amp;gt; d; double dis = sqrt(x * x + y * y); double a1 = acos((dis - d) / r); double a2 = acos((dis + d) / r); cout &amp;lt;&amp;lt; fixed &amp;lt;&amp;lt; setprecision(12) &amp;lt;&amp;lt; (a1 - a2) * r &amp;lt;&amp;lt; endl; } return 0; } G - Lexicographical Maximum 比较这个数本身和比它少一位的 $999&amp;hellip;99$ 哪个字典序大。</description>
     </item>
     
