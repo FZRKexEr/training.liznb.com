@@ -6,7 +6,17 @@
     <description>Recent content in Codeforces on Training</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Jul 2022 20:27:31 +0800</lastBuildDate><atom:link href="http://training.liznb.com/categories/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Jul 2022 01:33:00 +0800</lastBuildDate><atom:link href="http://training.liznb.com/categories/codeforces/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codeforces Round #809 (Div. 2)</title>
+      <link>http://training.liznb.com/posts/codeforces-1706/</link>
+      <pubDate>Wed, 20 Jul 2022 01:33:00 +0800</pubDate>
+      
+      <guid>http://training.liznb.com/posts/codeforces-1706/</guid>
+      <description>A - Another String Minimization Problem 模拟放置，先放靠前的位置，如果不能放再放靠后的位置。
+// // a.cpp // 2022-07-18 22:38 // // Created by liznb // #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #ifdef LOCAL #include &amp;quot;/Users/liznb/algo/liznb.h&amp;quot; #endif #define int long long signed main() { ios::sync_with_stdio(false); cin.tie(0); int z; cin &amp;gt;&amp;gt; z; while (z--) { int n, m; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; m; vector&amp;lt;int&amp;gt; a(n + 1); string s; for (int i = 1; i &amp;lt;= m; i++) s += &#39;B&#39;; for (int i = 1; i &amp;lt;= n;i ++) { cin &amp;gt;&amp;gt; a[i]; int p1 =a[i] - 1; int p2 = m + 1 - a[i] - 1; if (p1 &amp;gt; p2) swap(p1, p2); if (s[p1] == &#39;B&#39;) s[p1] = &#39;A&#39;; else { if (s[p2] == &#39;B&#39;) s[p2] = &#39;A&#39;; } } cout &amp;lt;&amp;lt; s &amp;lt;&amp;lt; endl; } return 0; } B - Making Towers 如果一个数字和它上一次出现的时候相差偶数个其他数字。那么就可以把塔叠高一层，如果相差奇数个数字，那么就把本次出现的数字当作其他数字，继续往后面找。</description>
+    </item>
+    
     <item>
       <title>Codeforces Round #808 (Div. 2)</title>
       <link>http://training.liznb.com/posts/codeforces-1708/</link>
