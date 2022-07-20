@@ -23,7 +23,7 @@
       <pubDate>Wed, 20 Jul 2022 01:18:00 +0800</pubDate>
       
       <guid>http://training.liznb.com/posts/2022%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A11/</guid>
-      <description>B - Dragon slayer 枚举哪些墙要消失，然后 BFS 判断联通性。
+      <description>B - Dragon slayer 枚举哪些墙要消失，然后 BFS 判断连通性。
 // // 1002.cpp // 2022-07-19 14:30 // // Created by liznb // #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; #ifdef LOCAL #include &amp;quot;/Users/liznb/algo/liznb.h&amp;quot; #endif // 快速读入输出 // 1. From tourist // 2. 唯一的修改, 增加 #define endl &#39;\n&#39; // 3. 支持 __int128 // 4. 其他用法 cin cout 一样 #define endl &#39;\n&#39; static struct FastInput { static constexpr int BUF_SIZE = 1 &amp;lt;&amp;lt; 20; char buf[BUF_SIZE]; size_t chars_read = 0; size_t buf_pos = 0; FILE *in = stdin; char cur = 0; inline char get_char() { if (buf_pos &amp;gt;= chars_read) { chars_read = fread(buf, 1, BUF_SIZE, in); buf_pos = 0; buf[0] = (chars_read == 0 ?</description>
     </item>
     
